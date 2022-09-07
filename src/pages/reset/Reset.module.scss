@@ -1,0 +1,93 @@
+@import "../../styles/_include-media";
+
+.loginBox {
+  box-shadow: 0px 15px 50px rgba(131, 134, 157, 0.25);
+
+  @include media("<=phone") {
+    box-shadow: none;
+  }
+}
+
+.formBox {
+  width: 100%;
+}
+
+.leftSection {
+  @include media("<=tablet") {
+    // background-image: url("../../../public/images/login-img-one-min.png");
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.rightSection {
+  background: linear-gradient(
+    176.73deg,
+    rgba(28, 57, 17, 0.126) 40.82%,
+    rgba(27, 68, 44, 0.549) 53.59%,
+    rgba(14, 71, 38, 0.9) 91.93%
+  );
+}
+
+.firstImg {
+  // background-image: url("../../../public/images/login-img-one-min.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.firstImgVerify {
+  // background-image: url("../../../public/images/login-img-one-min.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.otp_container {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  grid-gap: 1.75rem;
+
+  @include media("<=phone") {
+    grid-gap: 1rem;
+  }
+}
+
+.otp_input {
+  flex: 1;
+  width: 100%;
+  height: 80px;
+  background: #f1f1f1;
+  border-radius: 0.75rem;
+  border: transparent;
+  color: #808080;
+  font-size: 2rem;
+
+  @include media("<=tablet") {
+    height: 80px;
+    border-radius: 0.5rem;
+  }
+
+  @include media("<=phone") {
+    height: 70px;
+    border-radius: 0.5rem;
+  }
+
+  @include media("<=400px") {
+    height: 60px;
+    border-radius: 0.5rem;
+  }
+}
+
+.otp_input_focus {
+  border: 1px solid #5cb23a !important;
+}

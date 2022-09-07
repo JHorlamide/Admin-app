@@ -1,0 +1,41 @@
+@import "../../../../../styles/_include-media";
+
+.otp_container {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  grid-gap: 1.75rem;
+
+  @include media("<=phone") {
+    grid-gap: 1rem;
+  }
+}
+
+.otp_input {
+  flex: 1;
+  width: 100%;
+  height: 100px;
+  background: #f1f1f1;
+  border-radius: 0.75rem;
+  border: transparent;
+  color: #808080;
+  font-size: 2rem;
+
+  @include media("<=tablet") {
+    height: 80px;
+    border-radius: 0.5rem;
+  }
+
+  @include media("<=phone") {
+    height: 70px;
+    border-radius: 0.5rem;
+  }
+
+  @include media("<=400px") {
+    height: 60px;
+    border-radius: 0.5rem;
+  }
+}
+
+.otp_input_focus {
+  border: 1px solid #5cb23a !important;
+}
